@@ -1,9 +1,9 @@
 import React, { useCallback, useRef } from 'react';
-import { Card } from "./card";
 import * as htmlToImage from 'html-to-image';
 import { toPng, toJpeg, toBlob, toPixelData, toSvg } from 'html-to-image';
 import download from "downloadjs";
-import ImageFile from "./image";
+import ImageFile from "./content";
+
 
 export function Export() {
 
@@ -18,17 +18,11 @@ export function Export() {
         console.error('oops, something went wrong!', error);
       });
   };
+  
   return (
     <>
       <ImageFile />
-      <div 
-        style={{
-          display: "block"
-        }}
-        id="my-node"
-        >
-          <button onClick={onButtonClick}>Download as JPEG</button>
-      </div>
+      <button onClick={onButtonClick}>Download as JPEG</button>
     </>
     
   );

@@ -24,7 +24,7 @@ body {
 
 #root {
   overflow: hidden;
-  background: radial-gradient(ellipse at center, #eef0f2 0%, #90a2b2 100%);
+  background-color: #F2F2F2;
 }
 #export {
     width: 600px;
