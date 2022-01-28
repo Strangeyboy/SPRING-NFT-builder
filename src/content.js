@@ -4,6 +4,7 @@ import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
+import { Templates } from "./templateSelector";
 
 const Input = styled('input')({
   display: 'none',
@@ -51,20 +52,37 @@ export default class ImageFile extends React.Component {
       const imgTag = this.buildImgTag();
   
       return <>
-        <Grid item xs={12} md={8}>
-          <label htmlFor={this.state.id} className="button">
-            <Input accept="image/*" id={this.state.id} multiple type="file" onChange={this.handleChange.bind(this)} className="show-for-sr"/>
-            <Box component="span" sx={{ p: 2, border: '1px dashed grey' }}>
-              <Button variant="contained" component="span">
-                Upload
-              </Button>
-            </Box>
-          </label>
-        </Grid>
-        <Grid item xs={12} md={4}>
-          <div id="export">
-            <Card src={imgTag}/>
+        <Grid item xs={12} md={6}>
+          <div 
+            className="mt2"
+          >
+            <label htmlFor={this.state.id} className="button">
+              Image asset <br></br>
+              <p>
+              Occupy twee irony whatever migas subway tile vexillologist fingerstache mustache</p>
+              <Input accept="image/*" id={this.state.id} multiple type="file" onChange={this.handleChange.bind(this)} className="show-for-sr"/>
+              <Box component="div" sx={{ p: 2, border: '1px dashed grey' }}>
+                <Button variant="contained" component="span">
+                  Upload
+                </Button>
+              </Box>
+            </label>
           </div>
+          <div
+            className="mt2"
+          >
+            <label
+            >Templates <br></br>
+              <Templates />
+            </label>
+          </div>
+        </Grid>
+        <Grid item xs={12} md={6}>
+          <Box>
+            <div id="export">
+              <Card src={imgTag}/>
+            </div>
+          </Box>
         </Grid>
     </>;
     }
