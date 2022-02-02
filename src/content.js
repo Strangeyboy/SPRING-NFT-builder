@@ -24,11 +24,11 @@ export default class ImageFile extends React.Component {
       let imgTag = null;
       if (this.state.imageURI !== null)
       imgTag = (this.state.imageURI);
-/*         imgTag = (<div className="row">
-                    <div className="small-9 small-centered columns">
-                      <img className="thumbnail" src={this.state.imageURI}></img>
-                    </div>
-                  </div>); */
+      /*    imgTag = (<div className="row">
+              <div className="small-9 small-centered columns">
+                <img className="thumbnail" src={this.state.imageURI}></img>
+              </div>
+            </div>); */
       return imgTag;
     }
     
@@ -58,8 +58,7 @@ export default class ImageFile extends React.Component {
           >
             <label htmlFor={this.state.id} className="button">
               Image asset <br></br>
-              <p>
-              Occupy twee irony whatever migas subway tile vexillologist fingerstache mustache</p>
+              <p>Occupy twee irony whatever migas subway tile vexillologist fingerstache mustache</p>
               <Input accept="image/*" id={this.state.id} multiple type="file" onChange={this.handleChange.bind(this)} className="show-for-sr"/>
               <Box component="div" sx={{ p: 2, border: '1px dashed grey' }}>
                 <Button variant="contained" component="span">
